@@ -15,7 +15,6 @@ namespace balaMyFirstCode
         static void Main(string[] args)
         {
 
-
             String filePath = "MyFirstDataSave.txt";
             fileSave Filesave = new fileSave(filePath);
             try
