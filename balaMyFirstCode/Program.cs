@@ -21,11 +21,12 @@ namespace balaMyFirstCode
             {
 
                 {
-                    String myText = "Hello World_This is Bala Writing first code to save data onto a text file";
-                    int number = 42;
-                    float floatvalue = 3.63746477f;
+                    String myText = "Hello World Code"; //modify value so the for loop and switch to executes for the length of the value
+                    int number = 42; //modify value to lessthan 20 to execute else command
+                    float floatvalue = 3.63746477f; //modify integer value so the while loop executes for the length of the value
                     decimal decNum = 3.1472538m;
                     DateTime CurrDateTime = DateTime.Now;
+                    int[] arrayint = new int[number/10];
 
 
                     Filesave.PrintClass(myText);

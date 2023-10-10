@@ -15,7 +15,7 @@ namespace balaMyFirstCode
         {
             this.filePath = filePath;
         }
-        public void Continue() // Class member
+        public void Continue() // Static Class member
 
         {
 
@@ -26,20 +26,45 @@ namespace balaMyFirstCode
         public void PrintClass(int value) // Class member
 
         {
-
-            using (StreamWriter dataWriter = new StreamWriter(filePath, true))
-                dataWriter.WriteLine("Integer Value = " + value);
-
+          
+            if (value > 20)
+            {
+                using (StreamWriter dataWriter = new StreamWriter(filePath, true))
+                    dataWriter.WriteLine("Integer Value is verified in ifelse and is greaterthan 20 i.e = " + value);
+            }
+            else
+            {
+                using (StreamWriter dataWriter = new StreamWriter(filePath, true))
+                    dataWriter.WriteLine("Integer Value is verified in ifelse and is lessthan 20 i.e = " + value);
+            }
 
         }
 
         public void PrintClass(String value) // Class member
 
         {
+            for (int i = 0; i < value.Length; i++)
+            {
+                char c = value[i];
 
-            using (StreamWriter dataWriter = new StreamWriter(filePath, true))
-                dataWriter.WriteLine("String Value = " + value);
+                switch  (c)
+                {
+                    case 'a':
+                    case 'e':
+                    case 'i':
+                    case 'o':
+                    case 'u':
+                        using (StreamWriter dataWriter = new StreamWriter(filePath, true))
+                            dataWriter.WriteLine("The " + i + "th character n the string " + value + " is a vowel i.e "+ c);
+                         
+                    break;
+                    default:
+                        using (StreamWriter dataWriter = new StreamWriter(filePath, true))
+                            dataWriter.WriteLine("The " + i + "th character n the string " + value + " is a consonant/space i.e " + c);
+                        break;
 
+                }
+            }
 
         }
 
@@ -47,10 +72,16 @@ namespace balaMyFirstCode
         public void PrintClass(float value) // Class member
 
         {
+          int j = 1;
+          
+            while (j < value)
+            {
+                
+                using (StreamWriter dataWriter = new StreamWriter(filePath, true))
+                    dataWriter.WriteLine("Writing float Value in while loop for " + j + "times = " + value);
+                j++;
 
-            using (StreamWriter dataWriter = new StreamWriter(filePath, true))
-                dataWriter.WriteLine("float Value = " + value);
-
+            }
 
         }
         public void PrintClass(decimal value) // Class member
